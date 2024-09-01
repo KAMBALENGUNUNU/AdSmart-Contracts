@@ -38,3 +38,6 @@ To use or test this smart contract, you can follow these steps:
     - Compile the contract.
     - Deploy the contract to your preferred Ethereum network (e.g., Rinkeby, Mainnet).
 
+3. **Interact with the contract**:
+    - Use Remix or a front-end interface to interact with the contract functions such as `createCampaign`, `registerPublisher`, `recordClick`, and `withdrawEarnings`.
+
