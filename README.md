@@ -19,3 +19,8 @@ The smart contract is written in Solidity and is designed with security and gas 
 - **Publisher**: A struct that holds information about each publisher, including wallet address and earnings.
 - **Campaign Management**: Functions to create campaigns, record clicks and impressions, and handle payments.
 - **Payment Handling**: Functions to automate payments to publishers and allow advertisers to withdraw unused budgets.
+### Security Considerations
+
+- The contract includes safeguards to ensure only the campaign creator (advertiser) can modify or deactivate campaigns.
+- Publishers can only withdraw earnings that they have legitimately earned through clicks and impressions.
+- The contract's logic ensures that campaigns cannot overspend their budgets.
