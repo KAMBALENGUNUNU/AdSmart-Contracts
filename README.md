@@ -28,4 +28,9 @@ The smart contract is written in Solidity and is designed with security and gas 
 ## Installation
 
 To use or test this smart contract, you can follow these steps:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/KAMBALENGUNUNU/adsmart-contracts.git
+    cd adsmart-contracts
+    ```
 
