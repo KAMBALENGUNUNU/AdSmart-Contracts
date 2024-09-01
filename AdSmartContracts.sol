@@ -13,3 +13,11 @@ contract AdSmartContracts {
         uint256 endTime;
         bool active;
     }
+    struct Publisher {
+        address payable wallet;
+        uint256 earnings;
+    }
+
+    mapping(uint256 => Campaign) public campaigns;
+    mapping(address => Publisher) public publishers;
+    uint256 public campaignCount;
