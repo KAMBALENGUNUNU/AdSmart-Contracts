@@ -69,3 +69,8 @@ To use or test this smart contract, you can follow these steps:
 ## Contributing
 
 Contributions are welcome! If you have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
+
+## Acknowledgments
+
+- Solidity documentation and community for providing the resources to learn and build secure smart contracts.
+- Remix IDE for offering an easy-to-use platform for developing and testing Solidity contracts.
