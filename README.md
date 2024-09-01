@@ -41,3 +41,10 @@ To use or test this smart contract, you can follow these steps:
 3. **Interact with the contract**:
     - Use Remix or a front-end interface to interact with the contract functions such as `createCampaign`, `registerPublisher`, `recordClick`, and `withdrawEarnings`.
 
+## Usage
+
+### Advertisers
+
+1. **Create a Campaign**:
+   - Call the `createCampaign` function with your desired budget, cost per click, cost per impression, and campaign duration.
+
