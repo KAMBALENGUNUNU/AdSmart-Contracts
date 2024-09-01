@@ -48,3 +48,9 @@ To use or test this smart contract, you can follow these steps:
 1. **Create a Campaign**:
    - Call the `createCampaign` function with your desired budget, cost per click, cost per impression, and campaign duration.
 
+2. **Deactivate a Campaign**:
+   - If needed, you can deactivate your campaign by calling the `deactivateCampaign` function.
+
+3. **Withdraw Unused Budget**:
+   - After a campaign is deactivated or expired, withdraw any unused budget using the `withdrawUnusedBudget` function.
+
