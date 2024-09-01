@@ -24,3 +24,8 @@ The smart contract is written in Solidity and is designed with security and gas 
 - The contract includes safeguards to ensure only the campaign creator (advertiser) can modify or deactivate campaigns.
 - Publishers can only withdraw earnings that they have legitimately earned through clicks and impressions.
 - The contract's logic ensures that campaigns cannot overspend their budgets.
+
+## Installation
+
+To use or test this smart contract, you can follow these steps:
+
