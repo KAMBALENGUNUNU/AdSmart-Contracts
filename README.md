@@ -65,3 +65,7 @@ To use or test this smart contract, you can follow these steps:
 
 3. **Withdraw Earnings**:
    - Call the `withdrawEarnings` function to transfer your earnings to your wallet.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
