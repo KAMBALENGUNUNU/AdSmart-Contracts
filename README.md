@@ -62,3 +62,6 @@ To use or test this smart contract, you can follow these steps:
 2. **Record Clicks and Impressions**:
    - Use the `recordClick` and `recordImpression` functions to log interactions and earn rewards.
 
+
+3. **Withdraw Earnings**:
+   - Call the `withdrawEarnings` function to transfer your earnings to your wallet.
