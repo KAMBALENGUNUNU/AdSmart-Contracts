@@ -10,3 +10,6 @@ This project provides a smart contract written in Solidity that enables advertis
 - **Ad Click and Impression Recording**: Publishers can record clicks and impressions, which are then verified and stored on the blockchain.
 - **Automated Payments**: Payments to publishers are automated through smart contracts, ensuring instant and secure transactions.
 - **Campaign Deactivation**: Advertisers can deactivate campaigns and withdraw unused budgets once campaigns are inactive or expired.
+## Smart Contract
+
+The smart contract is written in Solidity and is designed with security and gas optimization in mind. It features modifiers to ensure only authorized users can perform certain actions and employs efficient storage operations to minimize gas costs.
