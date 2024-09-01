@@ -33,4 +33,8 @@ To use or test this smart contract, you can follow these steps:
     git clone https://github.com/KAMBALENGUNUNU/adsmart-contracts.git
     cd adsmart-contracts
     ```
+2. **Deploy the contract** using Remix IDE or a local Ethereum development environment such as Hardhat or Truffle.
+    - Open the `AdSmartContracts.sol` file in Remix.
+    - Compile the contract.
+    - Deploy the contract to your preferred Ethereum network (e.g., Rinkeby, Mainnet).
 
