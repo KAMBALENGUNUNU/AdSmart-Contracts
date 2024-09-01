@@ -74,3 +74,7 @@ Contributions are welcome! If you have suggestions for improvements or want to a
 
 - Solidity documentation and community for providing the resources to learn and build secure smart contracts.
 - Remix IDE for offering an easy-to-use platform for developing and testing Solidity contracts.
+
+---
+
+This project aims to provide a more transparent, secure, and cost-effective way to manage digital advertising campaigns. By eliminating intermediaries and automating payments, it empowers both advertisers and publishers in the digital marketing ecosystem.
