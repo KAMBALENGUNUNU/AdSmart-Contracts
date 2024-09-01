@@ -59,3 +59,6 @@ To use or test this smart contract, you can follow these steps:
 1. **Register as a Publisher**:
    - Call the `registerPublisher` function to join the platform and start earning from ad clicks and impressions.
 
+2. **Record Clicks and Impressions**:
+   - Use the `recordClick` and `recordImpression` functions to log interactions and earn rewards.
+
