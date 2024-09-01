@@ -54,3 +54,8 @@ To use or test this smart contract, you can follow these steps:
 3. **Withdraw Unused Budget**:
    - After a campaign is deactivated or expired, withdraw any unused budget using the `withdrawUnusedBudget` function.
 
+### Publishers
+
+1. **Register as a Publisher**:
+   - Call the `registerPublisher` function to join the platform and start earning from ad clicks and impressions.
+
