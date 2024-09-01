@@ -13,3 +13,9 @@ This project provides a smart contract written in Solidity that enables advertis
 ## Smart Contract
 
 The smart contract is written in Solidity and is designed with security and gas optimization in mind. It features modifiers to ensure only authorized users can perform certain actions and employs efficient storage operations to minimize gas costs.
+### Contract Structure
+
+- **Campaign**: A struct that holds information about each campaign, including advertiser, budget, cost per click, cost per impression, and other relevant data.
+- **Publisher**: A struct that holds information about each publisher, including wallet address and earnings.
+- **Campaign Management**: Functions to create campaigns, record clicks and impressions, and handle payments.
+- **Payment Handling**: Functions to automate payments to publishers and allow advertisers to withdraw unused budgets.
