@@ -57,3 +57,13 @@ contract AdSmartContracts {
         });
           emit CampaignCreated(campaignCount, msg.sender, budget, block.timestamp, block.timestamp + duration);
     }
+
+       // Register as a publisher
+    function registerPublisher() external {
+        require(publishers[msg.sender].wallet == address(0), "Publisher already registered");
+
+        publishers[msg.sender] = Publisher({
+            wallet: payable(msg.sender),
+            earnings: 0
+        });
+    }
