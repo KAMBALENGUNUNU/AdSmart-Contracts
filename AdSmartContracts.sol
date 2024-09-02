@@ -75,3 +75,10 @@ contract AdSmartContracts {
 
         Campaign storage campaign = campaigns[campaignId];
         require(campaign.budget >= campaign.costPerClick, "Insufficient campaign budget");
+          campaign.totalClicks++;
+        campaign.budget -= campaign.costPerClick;
+
+        publishers[msg.sender].earnings += campaign.costPerClick;
+
+        emit AdClicked(campaignId, msg.sender, campaign.totalClicks);
+    }
