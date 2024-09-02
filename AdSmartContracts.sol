@@ -21,3 +21,7 @@ contract AdSmartContracts {
     mapping(uint256 => Campaign) public campaigns;
     mapping(address => Publisher) public publishers;
     uint256 public campaignCount;
+     event CampaignCreated(uint256 campaignId, address advertiser, uint256 budget, uint256 startTime, uint256 endTime);
+    event AdClicked(uint256 campaignId, address publisher, uint256 clicks);
+    event AdImpression(uint256 campaignId, address publisher, uint256 impressions);
+    event PaymentMade(uint256 campaignId, address publisher, uint256 amount);
