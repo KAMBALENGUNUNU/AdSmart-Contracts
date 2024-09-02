@@ -37,3 +37,9 @@ contract AdSmartContracts {
         require(block.timestamp >= campaigns[campaignId].startTime && block.timestamp <= campaigns[campaignId].endTime, "Campaign is outside active period");
         _;
     }
+
+     // Create a new advertising campaign
+    function createCampaign(uint256 budget, uint256 costPerClick, uint256 costPerImpression, uint256 duration) external {
+        require(budget > 0, "Budget must be greater than 0");
+        require(costPerClick > 0 || costPerImpression > 0, "At least one cost metric must be greater than 0");
+        require(duration > 0, "Duration must be greater than 0");
