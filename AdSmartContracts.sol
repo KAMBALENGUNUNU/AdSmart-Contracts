@@ -97,3 +97,15 @@ contract AdSmartContracts {
 
         emit AdImpression(campaignId, msg.sender, campaign.totalImpressions);
     }
+
+     // Withdraw earnings as a publisher
+    function withdrawEarnings() external {
+        require(publishers[msg.sender].earnings > 0, "No earnings to withdraw");
+
+        uint256 earnings = publishers[msg.sender].earnings;
+        publishers[msg.sender].earnings = 0;
+
+        publishers[msg.sender].wallet.transfer(earnings);
+
+        emit PaymentMade(0, msg.sender, earnings);
+    }
