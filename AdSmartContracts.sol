@@ -25,3 +25,7 @@ contract AdSmartContracts {
     event AdClicked(uint256 campaignId, address publisher, uint256 clicks);
     event AdImpression(uint256 campaignId, address publisher, uint256 impressions);
     event PaymentMade(uint256 campaignId, address publisher, uint256 amount);
+     modifier onlyAdvertiser(uint256 campaignId) {
+        require(campaigns[campaignId].advertiser == msg.sender, "Not the advertiser");
+        _;
+    }
