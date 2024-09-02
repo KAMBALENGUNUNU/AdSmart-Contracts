@@ -90,3 +90,10 @@ contract AdSmartContracts {
 
         Campaign storage campaign = campaigns[campaignId];
         require(campaign.budget >= campaign.costPerImpression, "Insufficient campaign budget");
+          campaign.totalImpressions++;
+        campaign.budget -= campaign.costPerImpression;
+
+        publishers[msg.sender].earnings += campaign.costPerImpression;
+
+        emit AdImpression(campaignId, msg.sender, campaign.totalImpressions);
+    }
