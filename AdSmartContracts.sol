@@ -122,3 +122,9 @@ contract AdSmartContracts {
     // Withdraw unused budget as an advertiser
     function withdrawUnusedBudget(uint256 campaignId) external onlyAdvertiser(campaignId) {
         require(campaigns[campaignId].active == false || block.timestamp > campaigns[campaignId].endTime, "Campaign must be inactive or expired");
+          uint256 remainingBudget = campaigns[campaignId].budget;
+        campaigns[campaignId].budget = 0;
+
+        payable(msg.sender).transfer(remainingBudget);
+    }
+}
