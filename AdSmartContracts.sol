@@ -82,3 +82,11 @@ contract AdSmartContracts {
 
         emit AdClicked(campaignId, msg.sender, campaign.totalClicks);
     }
+
+
+    // Record an ad impression by a publisher
+    function recordImpression(uint256 campaignId) external campaignActive(campaignId) {
+        require(publishers[msg.sender].wallet != address(0), "Publisher not registered");
+
+        Campaign storage campaign = campaigns[campaignId];
+        require(campaign.budget >= campaign.costPerImpression, "Insufficient campaign budget");
