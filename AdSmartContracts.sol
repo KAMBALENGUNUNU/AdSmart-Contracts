@@ -21,11 +21,19 @@ contract AdSmartContracts {
     mapping(uint256 => Campaign) public campaigns;
     mapping(address => Publisher) public publishers;
     uint256 public campaignCount;
-     event CampaignCreated(uint256 campaignId, address advertiser, uint256 budget, uint256 startTime, uint256 endTime);
+
+    event CampaignCreated(uint256 campaignId, address advertiser, uint256 budget, uint256 startTime, uint256 endTime);
     event AdClicked(uint256 campaignId, address publisher, uint256 clicks);
     event AdImpression(uint256 campaignId, address publisher, uint256 impressions);
     event PaymentMade(uint256 campaignId, address publisher, uint256 amount);
+
      modifier onlyAdvertiser(uint256 campaignId) {
         require(campaigns[campaignId].advertiser == msg.sender, "Not the advertiser");
+        _;
+    }
+
+      modifier campaignActive(uint256 campaignId) {
+        require(campaigns[campaignId].active, "Campaign not active");
+        require(block.timestamp >= campaigns[campaignId].startTime && block.timestamp <= campaigns[campaignId].endTime, "Campaign is outside active period");
         _;
     }
