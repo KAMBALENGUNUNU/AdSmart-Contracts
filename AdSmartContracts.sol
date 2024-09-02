@@ -55,3 +55,5 @@ contract AdSmartContracts {
             endTime: block.timestamp + duration,
             active: true
         });
+          emit CampaignCreated(campaignCount, msg.sender, budget, block.timestamp, block.timestamp + duration);
+    }
