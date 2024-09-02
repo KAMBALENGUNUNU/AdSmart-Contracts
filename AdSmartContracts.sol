@@ -109,3 +109,9 @@ contract AdSmartContracts {
 
         emit PaymentMade(0, msg.sender, earnings);
     }
+
+
+    // Deactivate a campaign (can only be done by the advertiser)
+    function deactivateCampaign(uint256 campaignId) external onlyAdvertiser(campaignId) {
+        campaigns[campaignId].active = false;
+    }
