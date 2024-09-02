@@ -43,3 +43,15 @@ contract AdSmartContracts {
         require(budget > 0, "Budget must be greater than 0");
         require(costPerClick > 0 || costPerImpression > 0, "At least one cost metric must be greater than 0");
         require(duration > 0, "Duration must be greater than 0");
+      campaignCount++;
+        campaigns[campaignCount] = Campaign({
+            advertiser: msg.sender,
+            budget: budget,
+            costPerClick: costPerClick,
+            costPerImpression: costPerImpression,
+            totalClicks: 0,
+            totalImpressions: 0,
+            startTime: block.timestamp,
+            endTime: block.timestamp + duration,
+            active: true
+        });
