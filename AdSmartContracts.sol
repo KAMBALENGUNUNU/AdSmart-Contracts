@@ -67,3 +67,11 @@ contract AdSmartContracts {
             earnings: 0
         });
     }
+
+
+    // Record an ad click by a publisher
+    function recordClick(uint256 campaignId) external campaignActive(campaignId) {
+        require(publishers[msg.sender].wallet != address(0), "Publisher not registered");
+
+        Campaign storage campaign = campaigns[campaignId];
+        require(campaign.budget >= campaign.costPerClick, "Insufficient campaign budget");
