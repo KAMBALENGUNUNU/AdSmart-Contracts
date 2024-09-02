@@ -115,3 +115,10 @@ contract AdSmartContracts {
     function deactivateCampaign(uint256 campaignId) external onlyAdvertiser(campaignId) {
         campaigns[campaignId].active = false;
     }
+
+      // Fallback function to receive ETH
+    receive() external payable {}
+
+    // Withdraw unused budget as an advertiser
+    function withdrawUnusedBudget(uint256 campaignId) external onlyAdvertiser(campaignId) {
+        require(campaigns[campaignId].active == false || block.timestamp > campaigns[campaignId].endTime, "Campaign must be inactive or expired");
